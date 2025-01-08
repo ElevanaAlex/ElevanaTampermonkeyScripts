@@ -6,9 +6,9 @@
 // @author       Alex Pitcher
 // @match        https://genie.entrepreneurscircle.org/v2/*
 // @grant        none
-// @require      https://raw.githubusercontent.com/ElevanaAlex/ElevanaTampermonkeyScripts/main/Modify%20Filter%20and%20Sort%20Button%20Styles.user.js
-// @downloadURL  https://raw.githubusercontent.com/ElevanaAlex/ElevanaTampermonkeyScripts/main/Modify%20Filter%20and%20Sort%20Button%20Styles.user.js
-// @updateURL    https://raw.githubusercontent.com/ElevanaAlex/ElevanaTampermonkeyScripts/main/Modify%20Filter%20and%20Sort%20Button%20Styles.user.js
+// @require      https://github.com/ElevanaAlex/ElevanaTampermonkeyScripts/raw/refs/heads/main/Modify%20Filter%20and%20Sort%20Button%20Styles.user.js
+// @downloadURL  https://github.com/ElevanaAlex/ElevanaTampermonkeyScripts/raw/refs/heads/main/Modify%20Filter%20and%20Sort%20Button%20Styles.user.js
+// @updateURL    https://github.com/ElevanaAlex/ElevanaTampermonkeyScripts/raw/refs/heads/main/Modify%20Filter%20and%20Sort%20Button%20Styles.user.js
 // ==/UserScript==
 
 (function () {
