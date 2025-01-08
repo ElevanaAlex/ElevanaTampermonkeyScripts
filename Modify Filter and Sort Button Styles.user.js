@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Modify Filter and Sort Button Styles
 // @namespace    http://tampermonkey.net/
-// @version      1.0
+// @version      1.1
 // @description  Change Filter and Sort button styles dynamically.
 // @author       Alex Pitcher
 // @match        https://genie.entrepreneurscircle.org/v2/*
