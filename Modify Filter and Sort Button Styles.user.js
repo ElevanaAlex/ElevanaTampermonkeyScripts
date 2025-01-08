@@ -6,6 +6,7 @@
 // @author       Alex Pitcher
 // @match        https://genie.entrepreneurscircle.org/v2/*
 // @grant        none
+// @require      https://github.com/ElevanaAlex/ElevanaTampermonkeyScripts/raw/refs/heads/main/Modify%20Filter%20and%20Sort%20Button%20Styles.user.js
 // ==/UserScript==
 
 (function () {
