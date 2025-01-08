@@ -1,12 +1,11 @@
 // ==UserScript==
 // @name         Modify-Filter-Button-Style
 // @namespace    http://tampermonkey.net/
-// @version      1.8
+// @version      1.9
 // @description  Change Filter and Sort button styles dynamically.
 // @author       Alex Pitcher
 // @match        https://genie.entrepreneurscircle.org/v2/*
 // @grant        none
-// @require      https://github.com/ElevanaAlex/ElevanaTampermonkeyScripts/raw/refs/heads/main/Modify%20Filter%20and%20Sort%20Button%20Styles.user.js
 // @downloadURL  https://github.com/ElevanaAlex/ElevanaTampermonkeyScripts/raw/refs/heads/main/Modify%20Filter%20and%20Sort%20Button%20Styles.user.js
 // @updateURL    https://github.com/ElevanaAlex/ElevanaTampermonkeyScripts/raw/refs/heads/main/Modify%20Filter%20and%20Sort%20Button%20Styles.user.js
 // ==/UserScript==
