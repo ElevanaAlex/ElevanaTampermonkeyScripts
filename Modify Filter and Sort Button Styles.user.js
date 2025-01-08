@@ -11,7 +11,7 @@
 
 (function () {
     'use strict';
-    // testing the auto load into tampermonkey
+    // testing the auto load into tampermonkey times a thousand
     // Function to update styles for filter buttons
     function updateFilterButtonStyles() {
         // Select all buttons with the filter class
