@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Modify Filter and Sort Button Styles
 // @namespace    http://tampermonkey.net/
-// @version      1.6
+// @version      1.7
 // @description  Change Filter and Sort button styles dynamically.
 // @author       Alex Pitcher
 // @match        https://genie.entrepreneurscircle.org/v2/*
@@ -13,7 +13,7 @@
 
 (function () {
     'use strict';
-    // testing the auto load into tampermonkey time a THOUSAND
+    // testing the auto load into tampermonkey time a MILLION
     // Function to update styles for filter buttons
     function updateFilterButtonStyles() {
         // Select all buttons with the filter class
