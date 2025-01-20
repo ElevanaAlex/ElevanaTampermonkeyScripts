@@ -1,9 +1,11 @@
 // ==UserScript==
-// @name         Auto Click Analytics with URL Monitoring
+// @name         Change Dashboard Convert Dates Bigger Error
 // @namespace    http://tampermonkey.net/
-// @version      1.3
-// @description  Automatically clicks on the "analytics" element on the specified URL with SPA support.
+// @version      1.5
+// @description  Automatically clicks "analytics", changes US date format to UK format, makes any warning/error messages much bigger
 // @match        https://genie.entrepreneurscircle.org/*
+// @downloadURL  https://github.com/ElevanaAlex/ElevanaTampermonkeyScripts/raw/refs/heads/main/Change-Dashboard-Convert-Dates-Bigger-Error.user.js
+// @updateURL    https://github.com/ElevanaAlex/ElevanaTampermonkeyScripts/raw/refs/heads/main/Change-Dashboard-Convert-Dates-Bigger-Error.user.js
 // @grant        none
 // ==/UserScript==
 
