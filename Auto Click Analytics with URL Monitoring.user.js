@@ -3,7 +3,7 @@
 // @namespace    http://tampermonkey.net/
 // @version      1.3
 // @description  Automatically clicks on the "analytics" element on the specified URL with SPA support.
-// @match        https://genie.entrepreneurscircle.org/v2/*
+// @match        https://genie.entrepreneurscircle.org/*
 // @grant        none
 // ==/UserScript==
 
