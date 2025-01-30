@@ -44,6 +44,16 @@
         cloneButton.style.color = "white";
         cloneButton.style.border = "none";
 
+        const style = document.createElement("style");
+        style.textContent = `
+            #CloneOpportunity {
+            background-color: #1D5E3B !important;
+            color: white !important;
+            border: none !important;
+            }
+        `;
+        document.head.appendChild(style);
+
         cloneButton.addEventListener("click", async () => {
             console.log("Clone button clicked.");
             const urlPath = window.location.pathname;
