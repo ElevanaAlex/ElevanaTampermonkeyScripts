@@ -50,6 +50,7 @@
             background-color: #1D5E3B !important;
             color: white !important;
             border: none !important;
+            margin-right: 8px;
             }
         `;
         document.head.appendChild(style);
