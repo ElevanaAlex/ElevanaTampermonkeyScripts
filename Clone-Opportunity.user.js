@@ -29,8 +29,6 @@
         if (document.querySelector("#CloneOpportunity")) {
             return;
         }
-
-        console.log("Adding Clone button...");
         const cancelButton = updateButton.previousElementSibling;
         const cloneButton = document.createElement("button");
         cloneButton.textContent = "Clone";
@@ -74,7 +72,6 @@
             })
                 .then(response => response.json())
                 .then(data => {
-                console.log("Server response:", data);
                 alert(data.message);
             })
                 .catch(error => {
