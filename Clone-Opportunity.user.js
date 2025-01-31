@@ -22,7 +22,6 @@
     }
 
     function addCloneButton() {
-        console.log("Checking for Clone button...");
         const updateButton = document.querySelector("#CreateUpdateOpportunity");
         if (!updateButton) {
             return;
