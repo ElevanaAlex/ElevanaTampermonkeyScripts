@@ -25,12 +25,9 @@
         console.log("Checking for Clone button...");
         const updateButton = document.querySelector("#CreateUpdateOpportunity");
         if (!updateButton) {
-            console.log("Update button not found yet.");
             return;
         }
-
         if (document.querySelector("#CloneOpportunity")) {
-            console.log("Clone button already exists.");
             return;
         }
 
@@ -56,25 +53,20 @@
         document.head.appendChild(style);
 
         cloneButton.addEventListener("click", async () => {
-            console.log("Clone button clicked.");
-            const urlPath = window.location.pathname;
-            const match = urlPath.match(/opportunities\/list\/([^/?]+)/);
-            const opportunityId = match ? match[1] : null;
-
-            console.log("Extracted Opportunity ID:", opportunityId);
-            if (!opportunityId) {
+            const opportunityId = getOpportunityId();
+            if (opportunityId) {
+                //console.log("Opportunity ID:", opportunityId);
+            } else {
+                console.error("Failed to retrieve Opportunity ID.");
                 alert("Opportunity ID not found.");
                 return;
             }
 
             const numClones = parseInt(prompt("How many opportunities would you like?"), 10);
-            console.log("User requested clones:", numClones);
             if (isNaN(numClones) || numClones < 1) {
                 alert("Invalid number entered.");
                 return;
             }
-
-            showLoading();
 
             fetch("https://api.elevana.com/genieai/clone_opportunities.php", {
                 method: "POST",
@@ -90,52 +82,28 @@
                 console.error("Error cloning opportunity:", error);
                 alert("Error cloning opportunity: " + error.message);
             });
-            hideLoading();
             closeOpportunityPopup();
         });
-
         cancelButton.parentNode.insertBefore(cloneButton, updateButton);
     }
-    function showLoading() {
-        let loadingOverlay = document.createElement("div");
-        loadingOverlay.id = "loadingOverlay";
-        loadingOverlay.style.position = "fixed";
-        loadingOverlay.style.top = "0";
-        loadingOverlay.style.left = "0";
-        loadingOverlay.style.width = "100%";
-        loadingOverlay.style.height = "100%";
-        loadingOverlay.style.background = "rgba(0, 0, 0, 0.5)";
-        loadingOverlay.style.display = "flex";
-        loadingOverlay.style.alignItems = "center";
-        loadingOverlay.style.justifyContent = "center";
-        loadingOverlay.style.zIndex = "9999";
 
-        let spinner = document.createElement("div");
-        spinner.style.border = "8px solid #f3f3f3";
-        spinner.style.borderTop = "8px solid #3498db";
-        spinner.style.borderRadius = "50%";
-        spinner.style.width = "60px";
-        spinner.style.height = "60px";
-        spinner.style.animation = "spin 1s linear infinite";
-
-        loadingOverlay.appendChild(spinner);
-        document.body.appendChild(loadingOverlay);
-
-        let style = document.createElement("style");
-        style.innerHTML = `
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+    function getOpportunityId() {
+        // Try to get the ID from the URL first
+        const urlPath = window.location.pathname;
+        const match = urlPath.match(/opportunities\/list\/([^/?]+)/);
+        if (match && match[1]) {
+            return match[1]; // Return the ID from the URL
         }
-    `;
-        document.head.appendChild(style);
-    }
 
-    function hideLoading() {
-        let overlay = document.getElementById("loadingOverlay");
-        if (overlay) {
-            overlay.remove();
+        // If not found, try to get it from the Audit Logs element
+        const auditLogElement = document.querySelector('.flex.items-center.text-xs > .cursor-pointer.text-blue-700');
+        if (auditLogElement) {
+            return auditLogElement.textContent.trim(); // Return the ID from the Audit Logs
         }
+
+        // If no ID is found, return null
+        console.warn("Opportunity ID not found in URL or Audit Logs.");
+        return null;
     }
     function closeOpportunityPopup() {
         let closeButton = document.getElementById("modal-header-modal-close-btn");
